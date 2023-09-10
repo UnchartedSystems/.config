@@ -1,0 +1,9 @@
+import = ["~/.config/alacritty/alacritty-theme/themes/citylights.toml"]
+
+[shell]
+program = "/usr/bin/fish"
+
+[font]
+#normal = { family = "JetBrainsMono Nerd Font", style = "Regular"}
+normal = { family = "FiraMono Nerd Font", style = "Regular"}
+size = 18.0
