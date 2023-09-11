@@ -12,9 +12,17 @@ super + Return
 super + {_,shift + }Return
 	firefox
 
-# program launcher
+# rofi: program launcher
 super + @space
 	rofi -show drun
+
+# rofi: window switcher
+super + alt + @space 
+	rofi -show combi -modes combi -combi-modes "window,drun,run"
+
+# rofi: clipboard history
+super + ctrl + @space
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # make sxhkd reload its configuration files:
 super + Escape
