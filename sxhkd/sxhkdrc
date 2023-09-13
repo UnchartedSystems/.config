@@ -12,6 +12,10 @@ super + Return
 super + {_,shift + }Return
 	firefox
 
+# files
+super + n
+	nemo
+
 # rofi: program launcher
 super + @space
 	rofi -show drun

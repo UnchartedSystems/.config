@@ -3,20 +3,22 @@
 (setq user-full-name "Daniel Whitaker"
       user-mail-address "Dan@uncharted.systems")
 
-(setq +doom-dashboard-banner-file "logo.png"
-      +doom-dashboard-banner-dir "~/.doom.d/")
+(setq +doom-dashboard-banner-file "zcacodemon.png"
+      +doom-dashboard-banner-dir "~/.config/doom/")
 
 (setq confirm-kill-emacs nil)
 
 
 (setq-default
+ pixel-scroll-precision-mode nil          ; smooth scrolling
  delete-by-moving-to-trash t            ; Delete files to trash
  evil-want-fine-undo t                  ; Make INSERT change granular
  uniquify-buffer-name-style 'forward    ; Uniquify buffer names
- truncate-string-ellipsis "…"           ; Unicode ellispis are nicer than "...", and also save /precious/ space
  inhibit-compacting-font-caches t       ; When there are lots of glyphs, keep them in memory                                        ;
  window-combination-resize t            ; take new window space from all relevant windows (not just current)
  x-stretch-cursor t)
+
+; truncate-string-ellipsis "…"           ; Unicode ellispis are nicer than "...", and also save /precious/ space
 
 (setq doom-theme 'doom-vibrant)
 (custom-set-faces!
@@ -26,8 +28,8 @@
 ;; (setq cider-clojure-cli-global-options "-J-XX:-OmitStackTraceInFastThrow")
 
 (setq
- doom-font (font-spec :family "Mononoki Nerd Font" :size 16)
- doom-unicode-font (font-spec :family "Mononoki Nerd Font Mono" :size 16)
+ doom-font (font-spec :family "Mononoki Nerd Font" :size 19)
+ doom-unicode-font (font-spec :family "Mononoki Nerd Font Mono" :size 19)
  doom-big-font (font-spec :family "Mononoki Nerd Font" :size 24))
 
 ;; Base Config Text:
