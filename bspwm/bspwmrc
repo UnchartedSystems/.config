@@ -9,6 +9,9 @@ feh --bg-scale ~/Pictures/Wallpapers/wallhaven-5729x8.jpg
 # launch greenclip
 greenclip daemon &
 
+# launch emacs daemon
+# emacsclient -e "(kill-emacs)"
+emacs --daemon
 
 # bspwm config
 pgrep -x sxhkd > /dev/null || sxhkd &

@@ -12,6 +12,10 @@ super + Return
 super + {_,shift + }Return
 	firefox
 
+# emacs client
+super + ctrl + Return
+	emacsclient -cn
+
 # files
 super + n
 	nemo

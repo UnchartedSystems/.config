@@ -1,36 +1,61 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-(setq user-full-name "Daniel Whitaker"
-      user-mail-address "Dan@uncharted.systems")
+(setq user-full-name "Dan Whitaker"
+      user-mail-address "dan@uncharted.systems")
 
 (setq +doom-dashboard-banner-file "zcacodemon.png"
       +doom-dashboard-banner-dir "~/.config/doom/")
 
-(setq confirm-kill-emacs nil)
+;; Hotkeys!
 
+(global-set-key (kbd "<f1>") 'helm-ag)
+(global-set-key (kbd "<f2>") 'elpher)
+
+;; Settings
 
 (setq-default
- pixel-scroll-precision-mode nil          ; smooth scrolling
+ undo-in-region t                       ; Select a region to prioritize regional undos
+ pixel-scroll-precision-mode nil        ; smooth scrolling
  delete-by-moving-to-trash t            ; Delete files to trash
  evil-want-fine-undo t                  ; Make INSERT change granular
  uniquify-buffer-name-style 'forward    ; Uniquify buffer names
  inhibit-compacting-font-caches t       ; When there are lots of glyphs, keep them in memory                                        ;
  window-combination-resize t            ; take new window space from all relevant windows (not just current)
- x-stretch-cursor t)
-
+ x-stretch-cursor t
+ confirm-kill-emacs nil)
 ; truncate-string-ellipsis "…"           ; Unicode ellispis are nicer than "...", and also save /precious/ space
+; (delete-selection-mode 1)               ; Replace selection when inserting text
+; (setq line-spacing 0.3)                ; seems like a nice line spacing balance.
+
+;; Theme
 
 (setq doom-theme 'doom-vibrant)
 (custom-set-faces!
   '(doom-modeline-buffer-modified :foreground "orange"))
 
-;; For debugging empty stack traces!
-;; (setq cider-clojure-cli-global-options "-J-XX:-OmitStackTraceInFastThrow")
+;; Font
 
 (setq
  doom-font (font-spec :family "Mononoki Nerd Font" :size 19)
  doom-unicode-font (font-spec :family "Mononoki Nerd Font Mono" :size 19)
  doom-big-font (font-spec :family "Mononoki Nerd Font" :size 24))
+
+;; LSP editing
+
+; (setq lsp-treemacs-sync-mode 1)
+; (setq lsp-lens-enable t)
+; (setq lsp-ui-doc-enable t)
+; (setq lsp-ui-doc-show-with-cursor t)
+; (setq lsp-ui-doc-show-with-mouse nil)
+; (setq lsp-ui-sideline-enable t)
+; (setq lsp-ui-sideline-show-code-actions t)
+; (setq lsp-modeline-code-actions-enable t)
+
+;; Code Editing
+
+;; For debugging empty stack traces!
+;; (setq cider-clojure-cli-global-options "-J-XX:-OmitStackTraceInFastThrow")
+
 
 ;; Base Config Text:
 
@@ -62,7 +87,6 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
