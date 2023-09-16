@@ -27,6 +27,25 @@
 ; (delete-selection-mode 1)               ; Replace selection when inserting text
 ; (setq line-spacing 0.3)                ; seems like a nice line spacing balance.
 
+;; Meow Config
+
+;(setq doom-localleader-alt-key "C-l")
+;(map! :map meow-leader-keymap "l" #'meow-keypad-start)
+
+;; Evil-cleverparens config
+
+(use-package evil-cleverparens ; copied & pasted
+  :after evil
+  :custom
+  (evil-cleverparens-use-additional-bindings t) ; barfing and slurping
+  :hook (paredit-mode . evil-cleverparens-mode))
+
+(use-package paredit
+  :hook (emacs-lisp-mode . paredit-mode)
+  :hook (clojure-mode . paredit-mode)
+  :hook (lisp-mode . paredit-mode)
+  :hook (common-lisp-mode . paredit-mode))
+
 ;; Theme
 
 (setq doom-theme 'doom-vibrant)
