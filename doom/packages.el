@@ -51,3 +51,4 @@
 
 (package! helm-ag)
 (package! evil-cleverparens)
+(package! elpher)

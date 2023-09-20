@@ -9,7 +9,9 @@
 ;; Hotkeys!
 
 (global-set-key (kbd "<f1>") 'helm-ag)
-(global-set-key (kbd "<f2>") 'elpher)
+(global-set-key (kbd "<f2>") 'helm-show-kill-ring)
+(global-set-key (kbd "<f3>") 'vundo)
+(global-set-key (kbd "<f4>") 'elpher)
 
 ;; Settings
 
@@ -45,6 +47,14 @@
   :hook (clojure-mode . paredit-mode)
   :hook (lisp-mode . paredit-mode)
   :hook (common-lisp-mode . paredit-mode))
+
+;; Elpher config
+
+(setq elpher-gemini-max-fill-width  100
+      elpher-gemini-TLS-cert-checks nil
+      elpher-ipv4-always            t
+      elpher-open-urls-with-eww     t
+      elpher-default-url-type       "gemini")
 
 ;; Theme
 
