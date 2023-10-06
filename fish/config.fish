@@ -11,7 +11,7 @@ function fish_greeting
     echo (set_color brwhite; echo Type) (set_color brblue; echo help)(set_color brwhite; echo) for the online docs
 end
 
-
+# requires fenv!
 fenv source ~/.profile
 
 starship init fish | source
