@@ -6,6 +6,9 @@
 (setq +doom-dashboard-banner-file "zcacodemon.png"
       +doom-dashboard-banner-dir "~/.config/doom/")
 
+;; POSIX shell (Fish workaround)
+(setq shell-file-name (executable-find "bash"))
+
 ;; Hotkeys!
 
 (global-set-key (kbd "<f1>") 'helm-ag)
